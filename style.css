@@ -1,0 +1,167 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap');
+
+/*reset - configutações do navegador*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background-image: url(./assets/background-image.jpg);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #121214;
+}
+
+body * {
+    font-family: 'Inter', sans-serif;
+    line-height: 160%;
+    font-style: normal;
+}
+
+header {
+    padding-top: 32px;
+    height: calc(120px + 32px);   /* Usamos a função cal() quando queremos calcular algo no CSS*/
+}
+
+header div {
+    width: 120px;
+    margin: auto;  /*Centraliza um elemento que não é texto(no caso de elementos dentro da div)*/
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    border-radius: 50%;
+    display: flex; /*como é apenas um elemento, ele vai centralizar a caixa ao redor do mesmo*/
+    padding: 4px;  
+    transition: transform .3s;  /*faz a transição do aumento de de scala ser mis suave sendo executada gradualmente em 3segundos*/
+}
+
+header div:hover {
+    transform: scale(1.1);  /*Aumenta a scala qndo passamos o mouse*/
+}
+
+header img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+main {
+    max-width: 580px;
+    width: 90%;
+    max-height: 264px;
+    margin: 32px auto;
+    display: grid;
+    gap: 24px;
+}
+
+section {
+    color: #ffffff;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+}
+
+section div {
+    background-color: #2A2634;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+}
+
+section h2 {
+    font-weight: 900;
+    font-size: 24px;
+    letter-spacing: -0.47px;
+}
+
+section p {
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: -0.18px;
+    color: #A1A1AA;
+
+}
+
+section ul {
+    display: flex; /*Faz com que um elemento fique do lado do outro*/
+    flex-wrap: wrap; /*Qndo diminui a tela ou caso haja muitos elementos os elemento irão fazer um wrap na linha de baixo*/
+    gap: 16px;
+    margin-top: 24px;
+    transition: transform .3s;
+}
+
+section ul li {
+    transition: transform .3s;
+}
+
+section ul li:hover {
+    transform: scale(1.1);
+}
+
+.games-list img {
+    width: 90px;
+    border-radius: 8px;
+}
+
+.channel-list img {
+    width: 70px;
+    border-radius: 50%;
+    border: 2px solid #443E54;
+}
+
+/* Animation 
+Primeiro preciamos definir a animação com @keyframes 
+Segundo precisamo definir o elemento sobre qual queremos aplicar com animation (nome da animação, tempo de execução)*/
+
+header div {
+    animation: fromTop .7s backwards;
+    animation-delay: .3s;
+}
+
+main section {
+    animation: fromBottom .7s backwards;
+}
+
+main section:nth-child(1) {
+    animation-delay: .6s;
+}
+
+main section:nth-child(2) {
+    animation-delay: .9s;
+}
+
+main section:nth-child(3) {
+    animation-delay: 1.2s;
+}
+
+@keyframes fromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px)
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes fromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(30px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
