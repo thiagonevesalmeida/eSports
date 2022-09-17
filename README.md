@@ -7,7 +7,7 @@
 Projeto construído durante o evento Next Level Week da Rocketseat.
 
 [🔗 Clique aqui para acessar](https://thiagonevesalmeida.github.io/my-esports)
-#
+
 
 ## 🛠️ Tecnologias
 
@@ -15,6 +15,6 @@ Projeto construído durante o evento Next Level Week da Rocketseat.
 - CSS 3
 - Git & Github
 
-## 📨 Contatos
+## 📨 Contato
 
 thiagonevesdealmeida@gmail.com
