@@ -2,7 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap');
 
-/*reset - configutações do navegador*/
 * {
     margin: 0;
     padding: 0;
@@ -29,21 +28,21 @@ body * {
 
 header {
     padding-top: 32px;
-    height: calc(120px + 32px);   /* Usamos a função cal() quando queremos calcular algo no CSS*/
+    height: calc(120px + 32px);  
 }
 
 header div {
     width: 120px;
-    margin: auto;  /*Centraliza um elemento que não é texto(no caso de elementos dentro da div)*/
+    margin: auto;  
     background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
     border-radius: 50%;
-    display: flex; /*como é apenas um elemento, ele vai centralizar a caixa ao redor do mesmo*/
+    display: flex; 
     padding: 4px;  
-    transition: transform .3s;  /*faz a transição do aumento de de scala ser mis suave sendo executada gradualmente em 3segundos*/
+    transition: transform .3s;  
 }
 
 header div:hover {
-    transform: scale(1.1);  /*Aumenta a scala qndo passamos o mouse*/
+    transform: scale(1.1);  
 }
 
 header img {
@@ -89,8 +88,8 @@ section p {
 }
 
 section ul {
-    display: flex; /*Faz com que um elemento fique do lado do outro*/
-    flex-wrap: wrap; /*Qndo diminui a tela ou caso haja muitos elementos os elemento irão fazer um wrap na linha de baixo*/
+    display: flex; 
+    flex-wrap: wrap; 
     gap: 16px;
     margin-top: 24px;
     transition: transform .3s;
@@ -114,10 +113,6 @@ section ul li:hover {
     border-radius: 50%;
     border: 2px solid #443E54;
 }
-
-/* Animation 
-Primeiro preciamos definir a animação com @keyframes 
-Segundo precisamo definir o elemento sobre qual queremos aplicar com animation (nome da animação, tempo de execução)*/
 
 header div {
     animation: fromTop .7s backwards;
